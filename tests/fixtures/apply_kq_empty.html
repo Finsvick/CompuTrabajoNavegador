@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Preguntas sin campos esperados (falsa)</title></head>
+<body>
+<form method="post" action="/candidate/kq?oi=AAAA">
+  <input type="hidden" name="__RequestVerificationToken" value="TOKEN-SECRETO-123">
+  <input type="hidden" name="Oi" value="OI-SECRETO-456">
+  <input type="text" name="Email" value="alguien.falso@example.com">
+  <textarea name="Cover">Texto personal falso que no debe salir</textarea>
+  <select name="Pais"><option value="ar" selected>Argentina</option></select>
+  <button type="submit" class="b_primary">Enviar mi CV</button>
+</form>
+<form method="get" action="/buscar"><input type="search" name="q" value="busqueda-secreta"></form>
+</body></html>

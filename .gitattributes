@@ -1,0 +1,2 @@
+# El xref del PDF de ejemplo depende de los bytes exactos: nada de conversion LF/CRLF.
+*.pdf binary

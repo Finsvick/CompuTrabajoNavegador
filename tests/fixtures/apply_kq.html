@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Preguntas de selección (falsa)</title></head>
+<body>
+<h1>Preguntas de selección</h1>
+<form method="post" action="/candidate/kq?oi=AAAA">
+  <input type="hidden" name="KillerQuestions[0].Id" value="101">
+  <div class="kq">
+    <p>¿Cuántos años de experiencia tenés con JavaScript?</p>
+    <div><input type="radio" id="q0a" name="KillerQuestions[0].ClosedQuestion" value="1"><label for="q0a">Menos de 1 año</label></div>
+    <div><input type="radio" id="q0b" name="KillerQuestions[0].ClosedQuestion" value="2"><label for="q0b">Entre 1 y 3 años</label></div>
+    <div><input type="radio" id="q0c" name="KillerQuestions[0].ClosedQuestion" value="3"><label for="q0c">Más de 3 años</label></div>
+  </div>
+  <input type="hidden" name="KillerQuestions[1].Id" value="102">
+  <div class="kq">
+    <p>¿Cuál es tu remuneración pretendida?</p>
+    <textarea name="KillerQuestions[1].OpenQuestion" maxlength="500"></textarea>
+  </div>
+  <input type="hidden" name="KillerQuestions[2].Id" value="103">
+  <div class="kq">
+    <p>¿Tenés disponibilidad presencial de lunes a viernes?</p>
+    <div><input type="radio" id="q2a" name="KillerQuestions[2].ClosedQuestion" value="1"><label for="q2a">Sí</label></div>
+    <div><input type="radio" id="q2b" name="KillerQuestions[2].ClosedQuestion" value="2"><label for="q2b">No</label></div>
+  </div>
+  <button type="submit" class="b_primary">Enviar mi CV</button>
+</form>
+</body></html>

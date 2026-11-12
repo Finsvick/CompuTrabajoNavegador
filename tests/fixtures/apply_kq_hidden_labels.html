@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Preguntas con radios ocultos y label (falsa)</title></head>
+<body>
+<h1>Preguntas de selección</h1>
+<!-- Los radios están ocultos por CSS (display:none): lo que se ve es su label[for]. Datos falsos. -->
+<form method="post" action="/candidate/kq?oi=AAAA">
+  <input type="hidden" name="KillerQuestions[0].Id" value="201">
+  <div class="kq">
+    <p>¿Cuántos años de experiencia tenés con atención al cliente?</p>
+    <div class="opt"><input type="radio" id="h0a" name="KillerQuestions[0].ClosedQuestion" value="1" style="display:none"><label for="h0a">Menos de 1 año</label></div>
+    <div class="opt"><input type="radio" id="h0b" name="KillerQuestions[0].ClosedQuestion" value="2" style="display:none"><label for="h0b">Entre 1 y 3 años</label></div>
+    <div class="opt"><input type="radio" id="h0c" name="KillerQuestions[0].ClosedQuestion" value="3" style="display:none"><label for="h0c">Más de 3 años</label></div>
+  </div>
+  <input type="hidden" name="KillerQuestions[1].Id" value="202">
+  <div class="kq">
+    <p>¿Tenés disponibilidad para trabajar de lunes a viernes?</p>
+    <div class="opt"><input type="radio" id="h1a" name="KillerQuestions[1].ClosedQuestion" value="1" style="display:none"><label for="h1a">Sí</label></div>
+    <div class="opt"><input type="radio" id="h1b" name="KillerQuestions[1].ClosedQuestion" value="2" style="display:none"><label for="h1b">No</label></div>
+  </div>
+  <button type="submit" class="b_primary">Enviar mi CV</button>
+</form>
+</body></html>

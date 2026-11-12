@@ -1,0 +1,35 @@
+# Copiá este archivo a profile.yaml y completalo con tus datos reales. profile.yaml no se sube a git.
+# Cada variante apunta a un CV en formato plain_text_resume.yaml (el de AIHawk).
+
+variants:                 # de 1 a 3 variantes de rol
+  - id: backend           # nombre corto, sin repetir
+    resume: examples/resume.example.yaml   # ruta absoluta o relativa a la carpeta de este archivo
+    pdf: examples/cv.example.pdf           # el PDF que se adjunta a esta variante: lo generás y revisás vos
+    keywords: [python, backend, api]       # palabras del rol (opcional)
+
+apply:                    # opcional; estos son los valores por defecto
+  threshold: 75           # puntaje mínimo (0 a 100) para postular
+  daily_cap: 10           # máximo de postulaciones por día (1 o más)
+
+run:                      # opcional; estos son los valores por defecto de `run` (un flag de la terminal gana)
+  pages: 2                # páginas del listado por keyword (1 o más)
+  max_details: 20         # detalles a bajar por corrida (0 o más)
+  score_limit: 20         # ofertas a puntuar por corrida (0 o más)
+  max_cost: 0.50          # gasto máximo de la corrida, en USD (mayor que 0)
+  max_cost_month: 2.00    # tope de gasto en OpenAI por mes (fecha UTC), en USD (mayor que 0); al llegar, no se puntúa más
+
+zones: []                 # provincias a las que limitás las ofertas, como las muestra Computrabajo (opcional); vacía = todas
+                          # ejemplo: [Capital Federal, Buenos Aires-GBA]. Las de otras provincias no se bajan, puntúan, calibran ni postulan
+
+exclude_companies: []     # empresas a las que no se postula (opcional)
+exclude_title_words: []   # palabras que descartan una oferta por el título (opcional)
+
+# answers:                # opcional; lo que el programa contesta tal cual en las preguntas de selección (todo texto)
+#   salary: "$ 900.000 mensuales"        # pretensión de jornada completa
+#   salary_part_time: "$ 500.000"        # pretensión de media jornada (medio tiempo, part time o franja de 6 horas o menos)
+#   salary_daily: "$ 40.000 por día"     # pretensión por día o por jornada
+#   availability: "mañana, tarde"        # turnos que podés trabajar
+#   modality: "presencial, híbrido"      # una o más: presencial, híbrido, remoto
+#   start: "inmediata"                   # cuándo podés empezar
+#   location: "Palermo, Capital Federal" # barrio y localidad donde vivís
+#   mobility: "Subte y colectivo"        # movilidad o transporte

@@ -1,0 +1,5 @@
+# Banco de verdades de ejemplo (datos falsos). Cada línea es un hecho corto y cierto que vos escribís;
+# el CV a medida puede usarlo (con sus palabras) además de tu CV base. El programa nunca escribe este archivo.
+- "Usé Node.js en trabajos prácticos de la tecnicatura"
+- "Armé una API REST con Express en un proyecto de la facultad"
+- "Trabajé en equipo con metodología ágil durante las prácticas"

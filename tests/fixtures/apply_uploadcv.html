@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Mis CV adjuntos (falsa)</title></head>
+<body>
+<h1>Currículums adjuntos</h1>
+<!-- Estructura real de uploadcv (FINDINGS 2026-11-04): cada PDF es una fila ul.fila_tabla; su radio rbPrincipal está solo en
+     li.tableof_col1, sin label[for], y el nombre del archivo es el texto de la fila. «No adjuntar» es #rbNoCV, con value 0. -->
+<form method="post" action="/candidate/cv/uploadcv">
+<ul class="fila_tabla">
+  <li class="tableof_col1"><input type="radio" id="rbNoCV" name="rbPrincipal" value="0"></li>
+  <li class="tableof_col2">No adjuntar ningún CV en Word/PDF a mis postulaciones</li>
+</ul>
+{{ROWS}}
+<input type="file" id="ContainerGeneralOverWrite_ContainerGeneral_fuUploadCv" name="fuUploadCv">
+</form>
+<!-- El cuadro de borrado del sitio (FINDINGS 2026-11-05): `$.blockUI({message: $("#frmDelete")})` lo muestra al tocar la papelera; mientras
+     tanto el original está oculto en la página. -->
+<div id="frmDelete" class="popup_gestof popup_gestcan hide">
+  <div class="md-modal md-effect-3 md-show">
+    <div class="md-content">
+      <div class="modal-p">
+        <h3>Eliminando curriculum...</h3>
+        <div class="triangulo_inf"></div>
+        <p>¿Estás seguro que deseás eliminar este currículum?</p>
+        <div class="submitbtn">
+          <input type="button" id="btDelete" class="submit_n" value="Eliminar">
+          <input type="button" id="btCancelDelete" class="cancelar_link" value="Cancelar">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

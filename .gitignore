@@ -1,0 +1,9 @@
+.env
+.browser-profile/
+profile.yaml
+data/
+cv/
+STOP
+__pycache__/
+.pytest_cache/
+.venv/
